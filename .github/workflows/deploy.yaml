@@ -26,7 +26,7 @@ jobs:
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
-      env:
+      with:
         external_repository: rupakl/rupakl.github.io
         personal_token: ${{ secrets.TOKEN }}
         publish_dir: ./public
