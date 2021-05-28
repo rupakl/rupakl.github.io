@@ -7,7 +7,7 @@ widget: experience
 headless: true
 
 # Order that this section appears on the page.
-weight: 40
+weight: 30
 
 title: Experience
 subtitle:
@@ -22,28 +22,27 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
-  - title: CEO
-    company: GenCoin
-    company_url: ''
-    company_logo: org-gc
-    location: California
-    date_start: '2021-01-01'
-    date_end: ''
-    description: |2-
-        Responsibilities include:
+  - title: Senior Machine Learning Engineer
+    company: AIMonk Labs Private Limited
+    company_url: 'https://aimonk.com/'
+    company_logo: aimonk_logo
+    location: Bengaluru, India
+    date_start: '2019-05-15'
+    date_end: '2020-08-07'
+    # description: |2-
+    #     Responsibilities include:
         
-        * Analysing
-        * Modelling
-        * Deploying
-        
-  - title: Professor of Semiconductor Physics
-    company: University X
-    company_url: ''
-    company_logo: org-x
-    location: California
-    date_start: '2016-01-01'
-    date_end: '2020-12-31'
-    description: Taught electronic engineering and researched semiconductor physics.
+    #     * Analysing
+    #     * Modelling
+    #     * Deploying
+
+  - title: Machine Learning Engineer
+    company: AIMonk Labs Private Limited
+    company_url: 'https://aimonk.com/'
+    company_logo: aimonk_logo
+    location: Bengaluru, India
+    date_start: '2017-07-11'
+    date_end: '2019-05-15'
 
 design:
   columns: '2'
