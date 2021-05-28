@@ -12,14 +12,23 @@ jobs:
 
     steps:
     - name: Checkout master
-      uses: actions/checkout@v1
-      with:
-        submodules: true
+      uses: actions/checkout@v2
 
-    - name: Hugo Deploy GitHub Pages
-      uses: benmatselby/hugo-deploy-gh-pages@master
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.83.1'
+        extended: true
+
+    - name: Build
+      run: hugo --minify
+
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
       env:
-        HUGO_VERSION: 0.83.1
-        TARGET_REPO: rupakl/rupakl.github.io
-        TOKEN: ${{ secrets.TOKEN }}
-        CNAME: https://rupakl.github.io
+        external_repository: rupakl/rupakl.github.io
+        personal_token: ${{ secrets.TOKEN }}
+        publish_dir: ./public
+        publish_branch: master
+        cname: https://rupakl.github.io
